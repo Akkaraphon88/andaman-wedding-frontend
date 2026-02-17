@@ -112,7 +112,7 @@ export default function AdminPage() {
                             <span className="text-xs font-bold tracking-wider opacity-80 uppercase">System Online</span>
                         </div>
                         <p className="text-sm font-bold bg-white/10 px-3 py-1 rounded-lg backdrop-blur-sm border border-white/20">
-                            Admin: <span className="text-gold">Akkaraphon888</span>
+                            Admin: <span className="text-gold">akkaraphon888</span>
                         </p>
                     </div>
                 </div>
