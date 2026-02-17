@@ -58,8 +58,8 @@ export default function ProductCard({ product }: { product: ProductProps }) {
                     <button
                         disabled={isRented}
                         className={`w-full py-3 text-sm uppercase tracking-wider font-semibold border ${isRented
-                                ? "border-gray-300 text-gray-400 cursor-not-allowed"
-                                : "border-midnight-blue text-midnight-blue hover:bg-midnight-blue hover:text-white"
+                            ? "border-gray-300 text-gray-400 cursor-not-allowed"
+                            : "border-midnight-blue text-midnight-blue hover:bg-midnight-blue hover:text-white"
                             } transition-all`}
                     >
                         {isRented ? "ไม่ว่าง" : "ดูรายละเอียด"}
@@ -69,4 +69,3 @@ export default function ProductCard({ product }: { product: ProductProps }) {
         </div>
     );
 }
-```
