@@ -7,8 +7,8 @@ import ProductCard from "@/components/ProductCard";
 import FilterBar from "@/components/FilterBar";
 import MapSection from "@/components/MapSection";
 import Footer from "@/components/Footer";
+import AboutSection from "@/components/AboutSection";
 
-// Mock Data
 type Product = {
   id: number;
   name: string;
@@ -19,81 +19,113 @@ type Product = {
 };
 
 const products: Product[] = [
-  // --- Thai Dresses (Highlights) ---
+  // --- Thai Dresses (ชุดไทย) ---
   {
     id: 1,
-    name: "ชุดไทยจักรพรรดิ สีกลีบบัว",
+    name: "ชุดไทยจักรพรรดิ สีกลีบบัวทอง",
     category: "ชุดไทย",
     price: 15900,
-    image: "https://images.unsplash.com/photo-1621644827013-286896063e92?q=80&w=2070&auto=format&fit=crop",
+    image: "/images/products/product-01.jpg",
     status: "available",
   },
   {
     id: 2,
-    name: "ชุดไทยศิวาลัย สีทอง",
+    name: "ชุดไทยศิวาลัย น้ำเงินทองมงคล",
     category: "ชุดไทย",
     price: 18500,
-    image: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1974&auto=format&fit=crop",
+    image: "/images/products/product-02.jpg",
     status: "available",
   },
   {
     id: 3,
-    name: "ชุดไทยบรมพิมาน สีงาช้าง",
+    name: "ชุดไทยบรมพิมาน สีชมพูทอง",
     category: "ชุดไทย",
     price: 12000,
-    image: "https://images.unsplash.com/photo-1596353995818-f090b6330ce1?q=80&w=2070&auto=format&fit=crop",
-    status: "rented",
+    image: "/images/products/product-03.jpg",
+    status: "available",
   },
   {
     id: 4,
-    name: "ชุดไทยประยุกต์ สีโรสโกลด์",
+    name: "ชุดไทยประยุกต์ สีแดงทับทิม",
     category: "ชุดไทย",
-    price: 9500,
-    image: "https://images.unsplash.com/photo-1605289355680-75fbbee5c1d9?q=80&w=1998&auto=format&fit=crop",
+    price: 13500,
+    image: "/images/products/product-04.jpg",
+    status: "available",
+  },
+  {
+    id: 5,
+    name: "ชุดไทยจักรพรรดิ สีทองโบราณ",
+    category: "ชุดไทย",
+    price: 16900,
+    image: "/images/products/product-05.jpg",
     status: "available",
   },
 
   // --- Wedding Gowns ---
   {
-    id: 5,
-    name: "Luxury Ball Gown (Swarovski)",
-    category: "ชุดแต่งงาน",
-    price: 35000,
-    image: "https://images.unsplash.com/photo-1549417229-aa67d3263c09?q=80&w=2070&auto=format&fit=crop",
-    status: "available",
-  },
-  {
     id: 6,
-    name: "Minimalist Silk Dress",
+    name: "Luxury Ball Gown (งานปักเลื่อม)",
     category: "ชุดแต่งงาน",
-    price: 22000,
-    image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop",
+    price: 25900,
+    image: "/images/products/product-06.jpg",
     status: "available",
   },
   {
     id: 7,
-    name: "Mermaid Lace Gown",
+    name: "Classic Silk Wedding Dress",
     category: "ชุดแต่งงาน",
-    price: 28000,
-    image: "https://images.unsplash.com/photo-1594539623547-7ac02ad861e6?q=80&w=2070&auto=format&fit=crop",
-    status: "rented",
-  },
-
-  // --- Suits ---
-  {
-    id: 8,
-    name: "Midnight Blue Tuxedo",
-    category: "ชุดสูท",
-    price: 6500,
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2071&auto=format&fit=crop",
+    price: 15900,
+    image: "/images/products/product-07.jpg",
     status: "available",
   },
   {
+    id: 8,
+    name: "Mermaid Lace Gown",
+    category: "ชุดแต่งงาน",
+    price: 18900,
+    image: "/images/products/product-08.jpg",
+    status: "rented",
+  },
+  {
+    id: 9,
+    name: "Modern Thai Dress (Gold)",
+    category: "ชุดไทย",
+    price: 9500,
+    image: "/images/products/product-09.jpg",
+    status: "available",
+  },
+
+  // --- Suits / Others ---
+  {
     id: 10,
-    name: "Classic Beige Suit",
+    name: "ชุดไทยเจ้าบ่าว สีครีมทอง",
     category: "ชุดสูท",
-    price: 5500,
-    image: "https://images.unsplash.com/photo-1593030761757-71bd90d9d53c?q=80&w=2079&auto=format&fit=crop",
+    price: 6500,
+    image: "/images/products/product-10.jpg",
+    status: "available",
+  },
+  {
+    id: 11,
+    name: "ชุดไทยประยุกต์ สีเงิน",
+    category: "ชุดไทย",
+    price: 8500,
+    image: "/images/products/product-11.jpg",
+    status: "available",
+  },
+  {
+    id: 12,
+    name: "ชุดไทยจักรพรรดิ (Royal Collection)",
+    category: "ชุดไทย",
+    price: 22000,
+    image: "/images/products/product-12.jpg",
+    status: "rented",
+  },
+  {
+    id: 13,
+    name: "ชุดไทยคู่รัก (Set)",
+    category: "ชุดไทย",
+    price: 15000,
+    image: "/images/products/product-13.jpg",
     status: "available",
   },
 ];
@@ -118,36 +150,37 @@ export default function Home() {
   });
 
   return (
-    <main className="min-h-screen bg-gray-50 pb-20">
+    <main className="min-h-screen bg-off-white pb-20 font-prompt">
       <Navbar />
       <Hero />
 
-      <AboutSection />
-
-      <section id="collections" className="container mx-auto px-6 py-24">
+      {/* Product Collections */}
+      <section id="collections" className="container mx-auto px-6 py-24 relative z-10">
         <div className="text-center mb-16">
-          <p className="text-sm font-bold text-gray-500 tracking-[0.2em] uppercase mb-3">
-            Our Collections
+          <p className="text-sm font-bold text-gray-400 tracking-[0.3em] uppercase mb-4">
+            Our Premium Collections
           </p>
-          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-midnight-blue">
-            คอลเลกชันล่าสุด
+          <h2 className="text-4xl md:text-5xl font-playfair font-bold text-midnight-blue drop-shadow-sm">
+            คอลเลกชันชุดแต่งงานและชุดไทย
           </h2>
-          <div className="w-24 h-1 bg-midnight-blue mx-auto mt-6"></div>
-          <p className="mt-4 text-gray-500 font-light">
-            รวมชุดไทยและชุดแต่งงานที่คัดสรรมาอย่างดีที่สุด
+          <div className="w-24 h-1 bg-midnight-blue mx-auto mt-6 mb-4"></div>
+          <p className="text-gray-500 font-light text-lg">
+            คัดสรรความงดงามเลอค่า เพื่อวันสำคัญที่สุดของคุณ
           </p>
         </div>
 
         {/* Filter Section */}
         <div className="mb-12 sticky top-24 z-30 transition-all duration-300">
-          <FilterBar
-            searchQuery={searchQuery}
-            setSearchQuery={setSearchQuery}
-            selectedCategory={selectedCategory}
-            setSelectedCategory={setSelectedCategory}
-            showAvailableOnly={showAvailableOnly}
-            setShowAvailableOnly={setShowAvailableOnly}
-          />
+          <div className="bg-white/80 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-white/50">
+            <FilterBar
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+              selectedCategory={selectedCategory}
+              setSelectedCategory={setSelectedCategory}
+              showAvailableOnly={showAvailableOnly}
+              setShowAvailableOnly={setShowAvailableOnly}
+            />
+          </div>
         </div>
 
         {/* Product Grid */}
@@ -158,14 +191,61 @@ export default function Home() {
             ))}
           </div>
         ) : (
-          <div className="text-center py-20 bg-white rounded-xl shadow-sm border border-gray-100">
-            <p className="text-xl text-gray-500 font-prompt">
-              ไม่พบสินค้าที่คุณค้นหา กรุณาลองใหม่
+          <div className="text-center py-32 bg-white rounded-3xl shadow-soft border border-gray-100">
+            <i className="fas fa-search text-6xl text-gray-200 mb-6"></i>
+            <p className="text-2xl text-gray-400 font-bold">
+              ไม่พบสินค้าที่คุณค้นหา
             </p>
+            <p className="text-gray-400 mt-2">กรุณาลองเปลี่ยนคำค้นหาหรือหมวดหมู่</p>
           </div>
         )}
       </section>
 
+      {/* Store Atmosphere Section */}
+      <section id="store-atmosphere" className="py-24 bg-white relative">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="order-2 lg:order-1 relative">
+              {/* Image Grid */}
+              <div className="grid grid-cols-2 gap-4">
+                <img src="/images/store/inside-01.jpg" alt="Inside Store 1" className="rounded-2xl shadow-lg w-full h-64 object-cover transform hover:scale-105 transition-transform duration-500" />
+                <img src="/images/store/front.jpg" alt="Store Front" className="rounded-2xl shadow-lg w-full h-64 object-cover mt-12 transform hover:scale-105 transition-transform duration-500" />
+                <img src="/images/store/overview.jpg" alt="Overview" className="rounded-2xl shadow-lg w-full h-64 object-cover col-span-2 transform hover:scale-105 transition-transform duration-500" />
+              </div>
+            </div>
+
+            <div className="order-1 lg:order-2 text-center lg:text-left">
+              <span className="text-gold font-bold tracking-widest uppercase mb-2 block">Atmosphere</span>
+              <h2 className="text-4xl md:text-5xl font-playfair font-bold text-midnight-blue mb-8 leading-tight">
+                สัมผัสบรรยากาศ <br />
+                <span className="text-silver italic">แห่งความประทับใจ</span>
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                ร้านวิวาห์อันดามัน (Andaman Wedding Studio) ตั้งอยู่ใจกลางเมืองบุรีรัมย์
+                ตกแต่งด้วยสไตล์โมเดิร์นลักชูรี่ บรรยากาศอบอุ่น เป็นกันเอง
+                พร้อมห้องลองชุดส่วนตัวที่กว้างขวาง ให้คุณและครอบครัวได้เลือกชมชุดสวยๆ
+                ได้อย่างสะดวกสบาย
+              </p>
+              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+                <div className="bg-off-white px-6 py-4 rounded-xl shadow-sm text-center min-w-[120px]">
+                  <i className="fas fa-tshirt text-3xl text-midnight-blue mb-2"></i>
+                  <p className="font-bold text-gray-700">500+ ชุด</p>
+                </div>
+                <div className="bg-off-white px-6 py-4 rounded-xl shadow-sm text-center min-w-[120px]">
+                  <i className="fas fa-camera text-3xl text-midnight-blue mb-2"></i>
+                  <p className="font-bold text-gray-700">Studio</p>
+                </div>
+                <div className="bg-off-white px-6 py-4 rounded-xl shadow-sm text-center min-w-[120px]">
+                  <i className="fas fa-parking text-3xl text-midnight-blue mb-2"></i>
+                  <p className="font-bold text-gray-700">ที่จอดรถ</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <AboutSection />
       <MapSection />
       <Footer />
     </main>
